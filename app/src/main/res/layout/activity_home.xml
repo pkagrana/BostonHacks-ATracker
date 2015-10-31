@@ -14,14 +14,17 @@
         android:textSize="40px"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/weightdescription"
         android:textSize="20px"
         android:text="Please Enter Your Weight"
-        />
+        android:layout_alignBaseline="@+id/weight"
+        android:layout_alignBottom="@+id/weight"
+        android:layout_centerHorizontal="true" />
+    -->
 
     <EditText
         android:layout_width="wrap_content"
@@ -31,6 +34,37 @@
         android:layout_alignEnd="@+id/alcoholTracker"
         android:layout_marginTop="46dp"
         android:layout_alignStart="@+id/alcoholTracker" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button - Go to mkyong.com"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:editable = "true"
+        android:text="Small Text"
+        android:id="@+id/textView1"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp" />
+
+
+    <!--
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/weight"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="46dp" />
+    -->
 
 
 </RelativeLayout>
