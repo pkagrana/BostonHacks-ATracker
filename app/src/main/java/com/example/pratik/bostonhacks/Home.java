@@ -20,26 +20,30 @@ import java.util.ArrayList;
 
 public class Home extends Activity {
 
-
-    ArrayList<String> drinksConsumed = new ArrayList<String>();
-    private double weight;
     Button button;
-    Spinner spinner;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        addListenerOnButton1();
 
-    }
+        button=(Button)findViewById(R.id.getStartedButton);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(), DataCollect.class);
+                startActivity(i);
+            }
+        });
+    } // end of method
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
-    }
+    } // end of method
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -54,57 +58,6 @@ public class Home extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public double getWeight () {
-        return this.weight;
-    }
-
-
-    // Button listener for
-    public void addListenerOnButton1() {
-        button = (Button) findViewById(R.id.button1);
-        button.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-
-                setText();
-                /*
-                Intent browserIntent =
-                        new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mkyong.com"));
-                startActivity(browserIntent);
-                */
-            }
-        });
     } // end of method
 
-
-    // Button listener for weight
-    public void addListenerOnButton2() {
-        button = (Button) findViewById(R.id.button1);
-        button.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                
-                setText();
-                /*
-                Intent browserIntent =
-                        new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.mkyong.com"));
-                startActivity(browserIntent);
-                */
-            }
-        });
-    } // end of method
-
-    public void setText () {
-        EditText userWeight = (EditText) findViewById(R.id.weight);
-        TextView text = (TextView) findViewById(R.id.textView1);
-        text.setText(userWeight.getText().toString());
-    } // end of method
-
-    public void spinnerListener () {
-
-    }
 } // end of class

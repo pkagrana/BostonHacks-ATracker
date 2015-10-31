@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome To ATracker"
+        android:text="Welcome To Alcohol Tracker"
         android:id="@+id/alcoholTracker"
         android:textSize="40px"
         android:layout_alignParentTop="true"
@@ -25,7 +25,7 @@
         android:layout_alignBottom="@+id/weight"
         android:layout_centerHorizontal="true" />
     -->
-
+    <!--
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,14 +34,15 @@
         android:layout_alignEnd="@+id/alcoholTracker"
         android:layout_marginTop="46dp"
         android:layout_alignStart="@+id/alcoholTracker" />
+    -->
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/getStartedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button - Go to mkyong.com"
+        android:text="Get Started"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
-
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +53,7 @@
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="71dp" />
-
+    -->
 
     <!--
     <Spinner
@@ -65,6 +66,4 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="46dp" />
     -->
-
-
 </RelativeLayout>
