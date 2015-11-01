@@ -21,6 +21,8 @@ public class DataCollect extends Activity {
     Beer b;
     Wine w;
     Liquor l;
+    Button maleButton;
+    Button femaleButton;
     Button beerButton;
     Button wineButton;
     Button liquorButton;
@@ -35,56 +37,21 @@ public class DataCollect extends Activity {
         weight = getUserWeight();
         minutes = getLastTimeAmount();
 
-        beerButton = (Button) findViewById(R.id.beer);
-        beerButton.setOnClickListener(new View.OnClickListener() {
+        maleButton = (Button) findViewById(R.id.male);
+        maleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("BEER");
-                System.out.println(getAlcoholAmount());
-                System.out.println(getUserAge());
-                System.out.println(getUserWeight());
-                System.out.println(getLastTimeAmount());
-                b = new Beer (getUserAge(), getUserWeight(), getAlcoholAmount(), getLastTimeAmount(), true);
-                double temp = b.getBAC();
-                System.out.println(temp);
-                if (temp > 0.08)
-                    beer = true;
+                System.out.println("MALE");
+                male();
             }
         });
 
-        wineButton = (Button) findViewById(R.id.wine);
-        wineButton.setOnClickListener(new View.OnClickListener() {
+        femaleButton = (Button) findViewById(R.id.female);
+        femaleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("WINE");
-                System.out.println(getAlcoholAmount());
-                System.out.println(getUserAge());
-                System.out.println(getUserWeight());
-                System.out.println(getLastTimeAmount());
-                w = new Wine (getUserAge(), getUserWeight(), getLastTimeAmount(),getAlcoholAmount(), true);
-                double temp = w.getBAC();
-                System.out.println(temp);
-                if (temp > 0.08) {
-                    wine = true;
-                }
-            }
-        });
-
-        liquorButton = (Button) findViewById(R.id.liquor);
-        liquorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("LIQUOR");
-                System.out.println(getAlcoholAmount());
-                System.out.println(getUserAge());
-                System.out.println(getUserWeight());
-                System.out.println(getLastTimeAmount());
-                l = new Liquor (getUserAge(), getUserWeight(), getLastTimeAmount(),getAlcoholAmount(), true);
-                double temp = l.getBAC();
-                System.out.println(temp);
-                if (temp > 0.08) {
-                    liquor = true;
-                }
+                System.out.println("FEMALE");
+                female();
             }
         });
 
@@ -125,6 +92,118 @@ public class DataCollect extends Activity {
 
         return super.onOptionsItemSelected(item);
     } // end of method
+
+    public void male () {
+        beerButton = (Button) findViewById(R.id.beer);
+        beerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("BEER MALE");
+                System.out.println(getAlcoholAmount());
+                System.out.println(getUserAge());
+                System.out.println(getUserWeight());
+                System.out.println(getLastTimeAmount());
+                b = new Beer(getUserAge(), getUserWeight(), getAlcoholAmount(), getLastTimeAmount(), true);
+                double temp = b.getBAC();
+                System.out.println(temp);
+                if (temp > 0.08)
+                    beer = true;
+            }
+        });
+
+        wineButton = (Button) findViewById(R.id.wine);
+        wineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("WINE MALE");
+                System.out.println(getAlcoholAmount());
+                System.out.println(getUserAge());
+                System.out.println(getUserWeight());
+                System.out.println(getLastTimeAmount());
+                w = new Wine(getUserAge(), getUserWeight(), getLastTimeAmount(), getAlcoholAmount(), true);
+                double temp = w.getBAC();
+                System.out.println(temp);
+                if (temp > 0.08) {
+                    wine = true;
+                }
+            }
+        });
+
+        liquorButton = (Button) findViewById(R.id.liquor);
+        liquorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("LIQUOR MALE");
+                System.out.println(getAlcoholAmount());
+                System.out.println(getUserAge());
+                System.out.println(getUserWeight());
+                System.out.println(getLastTimeAmount());
+                l = new Liquor(getUserAge(), getUserWeight(), getLastTimeAmount(), getAlcoholAmount(), true);
+                double temp = l.getBAC();
+                System.out.println(temp);
+                if (temp > 0.08) {
+                    liquor = true;
+                }
+            }
+        });
+    } // end of method
+
+    public void female () {
+        beerButton = (Button) findViewById(R.id.beer);
+        beerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("BEER FEMALE");
+                System.out.println(getAlcoholAmount());
+                System.out.println(getUserAge());
+                System.out.println(getUserWeight());
+                System.out.println(getLastTimeAmount());
+                b = new Beer(getUserAge(), getUserWeight(), getAlcoholAmount(), getLastTimeAmount(), false);
+                double temp = b.getBAC();
+                System.out.println(temp);
+                if (temp > 0.08)
+                    beer = true;
+            }
+        });
+
+        wineButton = (Button) findViewById(R.id.wine);
+        wineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("WINE FEMALE");
+                System.out.println(getAlcoholAmount());
+                System.out.println(getUserAge());
+                System.out.println(getUserWeight());
+                System.out.println(getLastTimeAmount());
+                w = new Wine(getUserAge(), getUserWeight(), getLastTimeAmount(), getAlcoholAmount(), false);
+                double temp = w.getBAC();
+                System.out.println(temp);
+                if (temp > 0.08) {
+                    wine = true;
+                }
+            }
+        });
+
+        liquorButton = (Button) findViewById(R.id.liquor);
+        liquorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("LIQUOR FEMALE");
+                System.out.println(getAlcoholAmount());
+                System.out.println(getUserAge());
+                System.out.println(getUserWeight());
+                System.out.println(getLastTimeAmount());
+                l = new Liquor(getUserAge(), getUserWeight(), getLastTimeAmount(), getAlcoholAmount(), true);
+                double temp = l.getBAC();
+                System.out.println(temp);
+                if (temp > 0.08) {
+                    liquor = true;
+                }
+            }
+        });
+    } // end of method
+
+
 
     // Method to get amount of alcohol
     public int getAlcoholAmount () {

@@ -163,6 +163,33 @@
         android:typeface="monospace"
         android:textStyle="italic" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:id="@+id/male"
+        android:layout_below="@+id/amount"
+        android:layout_alignStart="@+id/liquor"
+        android:typeface="monospace"
+        android:background="#1E69D3"
+        android:textColor="#FFF"
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Female"
+        android:id="@+id/female"
+        android:layout_below="@+id/textView4"
+        android:layout_toStartOf="@+id/time"
+        android:typeface="monospace"
+        android:background="#1E69D3"
+        android:textColor="#FFF"
+        />
+
+
     <!--
     <TextView
         android:layout_width="wrap_content"
