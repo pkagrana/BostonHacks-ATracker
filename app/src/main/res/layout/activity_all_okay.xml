@@ -11,13 +11,14 @@
 
 
     <TextView
-        android:text="YOU'RE GOOD TO GO! ENJOY YOUR NIGHT!"
+        android:text="YOU'RE GOOD TO GO, ENJOY YOUR NIGHT!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#15201E"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="36px"
+        android:textSize="72px"
+        android:gravity="center"
         android:layout_centerInParent="true"
         android:textStyle="bold"
         />

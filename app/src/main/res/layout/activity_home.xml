@@ -10,13 +10,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to drinkmate"
+        android:text="Welcome to Drinkmate"
         android:id="@+id/alcoholTracker"
-        android:textSize="40px"
+        android:textSize="72px"
         android:layout_marginBottom="47dp"
         android:textColor="#15201E"
+        android:gravity="center"
         android:layout_above="@+id/textView6"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
     <!--
     <TextView
         android:layout_width="wrap_content"
@@ -48,7 +50,8 @@
         android:layout_marginBottom="151dp"
         android:typeface="monospace"
         android:background="#1E69D3"
-        android:textColor="#FFF"/>
+        android:textColor="#FFF"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,7 +65,8 @@
         android:textColor="#15201E"
         android:gravity="center"
         android:layout_above="@+id/getStartedButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
     <!--
     <TextView
         android:layout_width="wrap_content"

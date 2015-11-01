@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.content.pm.PackageManager;
 import android.content.ComponentName;
 
-
 public class DisplayNextCourseOfAction extends Activity {
 
     Button button;

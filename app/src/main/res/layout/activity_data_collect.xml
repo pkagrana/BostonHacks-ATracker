@@ -163,7 +163,6 @@
         android:typeface="monospace"
         android:textStyle="italic" />
 
-
     <!--
     <TextView
         android:layout_width="wrap_content"
