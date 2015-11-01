@@ -1,6 +1,7 @@
 package com.example.pratik.bostonhacks;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +15,12 @@ public class DataCollect extends Activity {
     int amount;
     int age;
     int minutes;
+    static boolean beer = false;
+    static boolean wine = false;
+    static boolean liquor = false;
+    Beer b;
+    Wine w;
+    Liquor l;
     Button beerButton;
     Button wineButton;
     Button liquorButton;
@@ -37,11 +44,11 @@ public class DataCollect extends Activity {
                 System.out.println(getUserAge());
                 System.out.println(getUserWeight());
                 System.out.println(getLastTimeAmount());
-                Beer b = new Beer (age, weight, amount, minutes, true);
+                b = new Beer (getUserAge(), getUserWeight(), getAlcoholAmount(), getLastTimeAmount(), true);
                 double temp = b.getBAC();
-                if (temp > 0.08) {
-
-                }
+                System.out.println(temp);
+                if (temp > 0.08)
+                    beer = true;
             }
         });
 
@@ -54,10 +61,11 @@ public class DataCollect extends Activity {
                 System.out.println(getUserAge());
                 System.out.println(getUserWeight());
                 System.out.println(getLastTimeAmount());
-                Wine w = new Wine (age, weight, minutes, amount, true);
+                w = new Wine (getUserAge(), getUserWeight(), getLastTimeAmount(),getAlcoholAmount(), true);
                 double temp = w.getBAC();
+                System.out.println(temp);
                 if (temp > 0.08) {
-
+                    wine = true;
                 }
             }
         });
@@ -71,10 +79,11 @@ public class DataCollect extends Activity {
                 System.out.println(getUserAge());
                 System.out.println(getUserWeight());
                 System.out.println(getLastTimeAmount());
-                Liquor l = new Liquor (age, weight, minutes, amount, true);
+                l = new Liquor (getUserAge(), getUserWeight(), getLastTimeAmount(),getAlcoholAmount(), true);
                 double temp = l.getBAC();
+                System.out.println(temp);
                 if (temp > 0.08) {
-
+                    liquor = true;
                 }
             }
         });
@@ -84,19 +93,15 @@ public class DataCollect extends Activity {
             @Override
             public void onClick(View v) {
 
+                if (beer || wine || liquor) {
+                    Intent i = new Intent(getApplicationContext(), DisplayNextCourseOfAction.class);
+                    startActivity(i);
+                } else {
+                    Intent i = new Intent(getApplicationContext(), AllOkay.class);
+                    startActivity(i);
+                }
             }
         });
-
-
-
-
-
-
-
-
-
-
-
     } // end of method
 
     @Override

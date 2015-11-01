@@ -20,10 +20,18 @@
             android:name=".DataCollect"
             android:label="@string/title_activity_data_collect" >
         </activity>
-        <!--<activity-->
-            <!--android:name=".ChooseDrink"-->
-            <!--android:label="@string/title_activity_choose_drink" >-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name=".ChooseDrink" -->
+        <!-- android:label="@string/title_activity_choose_drink" > -->
+        <!-- </activity> -->
+        <activity
+            android:name=".DisplayNextCourseOfAction"
+            android:label="@string/title_activity_display_next_course_of_action" >
+        </activity>
+        <activity
+            android:name=".AllOkay"
+            android:label="@string/title_activity_all_okay" >
+        </activity>
     </application>
 
 </manifest>

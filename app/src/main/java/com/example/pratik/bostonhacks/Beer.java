@@ -42,7 +42,8 @@ public class Beer extends Alcohol {
         else {
             BAC = 100 * ( (this.getAlcoholContent()) / ( this.getWeight() * (constantFemale) ) );
         }
-
+        System.out.println(BAC - (this.getTime() * timeConstant));
+        //System.out.println(Double.parseDouble(d.format(BAC - (this.getTime() * timeConstant))));
         return Double.parseDouble(d.format(BAC - (this.getTime() * timeConstant)));
     }
 }

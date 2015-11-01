@@ -4,4 +4,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_display_next_course_of_action">DisplayNextCourseOfAction</string>
+    <string name="title_activity_all_okay">AllOkay</string>
+    <string name="title_activity_uber">Uber</string>
 </resources>
