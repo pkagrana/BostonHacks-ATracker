@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="welcome to drinkmate"
+        android:text="Welcome to drinkmate"
         android:id="@+id/alcoholTracker"
         android:textSize="40px"
         android:layout_marginBottom="47dp"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="drinkmate is the easy way to know your unique alcohol limit for safe and responsible drinking"
+        android:text="Drinkmate is the easy way to know your unique alcohol limit for safe and responsible drinking"
         android:id="@+id/textView6"
         android:textAlignment="center"
         android:phoneNumber="false"

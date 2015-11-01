@@ -5,8 +5,76 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".DataCollect"
-    android:background="#000">
+    android:background="#7c20ff23"
+    android:id="@+id/data_collect">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:text="0"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/age"
+        android:layout_alignTop="@+id/weight"
+        android:layout_alignEnd="@+id/getBLA" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/amount"
+        android:layout_below="@+id/weight"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/time"
+        android:layout_below="@+id/amount"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Blood Alcohol Content"
+        android:id="@+id/getBLA"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beer"
+        android:id="@+id/beer"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/liquor" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wine"
+        android:id="@+id/wine"
+        android:layout_below="@+id/beer"
+        android:layout_alignStart="@+id/beer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liquor"
+        android:id="@+id/liquor"
+        android:layout_above="@+id/beer"
+        android:layout_centerHorizontal="true" />
+
+
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,13 +104,22 @@
         android:layout_toEndOf="@+id/textView3"
         android:background="#00A8E8" />
 
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageEntry"
+        />
+
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/weightEntry"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_alignEnd="@+id/textView5" />
+        android:background="#ea7fffd5"
+        android:layout_above="@+id/selectDrink"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginBottom="71dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,5 +162,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
         android:textColor="#fff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/selectDrink"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/weightEntry" />
+    -->
 
 </RelativeLayout>
