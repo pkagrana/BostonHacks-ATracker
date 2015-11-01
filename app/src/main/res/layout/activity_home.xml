@@ -9,10 +9,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome To Alcohol Tracker"
+        android:text="welcome to drinkmate"
         android:id="@+id/alcoholTracker"
         android:textSize="40px"
-        android:layout_alignParentTop="true"
+        android:layout_marginBottom="47dp"
+        android:layout_above="@+id/textView6"
         android:layout_centerHorizontal="true" />
     <!--
     <TextView
@@ -40,7 +41,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get Started"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="151dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="drinkmate is the easy way to know your unique alcohol limit for safe and responsible drinking"
+        android:id="@+id/textView6"
+        android:textAlignment="center"
+        android:phoneNumber="false"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/getStartedButton"
         android:layout_centerHorizontal="true" />
     <!--
     <TextView
