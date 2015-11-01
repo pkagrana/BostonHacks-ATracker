@@ -5,7 +5,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".DataCollect"
-    android:background="#7c20ff23"
+    android:background="#C9B0CB"
     android:id="@+id/data_collect">
 
     <EditText
@@ -13,33 +13,41 @@
         android:layout_height="wrap_content"
         android:id="@+id/weight"
         android:text="0"
+        android:inputType="number"
+        android:textColor="#fff"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toEndOf="@+id/textView2" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:inputType="number"
         android:id="@+id/age"
-        android:layout_alignTop="@+id/weight"
-        android:layout_alignEnd="@+id/getBLA" />
+        android:textColor="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/getBLA" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:id="@+id/amount"
+        android:inputType="number"
+        android:layout_marginTop="32dp"
         android:layout_below="@+id/weight"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp" />
+        android:layout_alignStart="@+id/weight"
+        android:textColor="#fff" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
         android:id="@+id/time"
-        android:layout_below="@+id/amount"
-        android:layout_alignParentStart="true" />
+        android:inputType="number"
+        android:textColor="#fff"
+        android:layout_alignTop="@+id/amount"
+        android:layout_alignStart="@+id/age" />
 
     <Button
         android:layout_width="wrap_content"
@@ -47,31 +55,113 @@
         android:text="Get Blood Alcohol Content"
         android:id="@+id/getBLA"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#15201E"
+        android:typeface="monospace"
+        android:textColor="#fff" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Beer"
         android:id="@+id/beer"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/liquor" />
+        android:layout_below="@+id/wine"
+        android:layout_alignStart="@+id/wine"
+        android:layout_marginTop="25dp"
+        android:layout_alignEnd="@+id/wine"
+        android:typeface="monospace"
+        android:background="#1E69D3"
+        android:textColor="#FFF" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wine"
+        android:textColor="#fff"
+        android:background="#1E69D3"
         android:id="@+id/wine"
-        android:layout_below="@+id/beer"
-        android:layout_alignStart="@+id/beer" />
+        android:layout_below="@+id/liquor"
+        android:layout_alignStart="@+id/liquor"
+        android:layout_marginTop="29dp"
+        android:layout_alignEnd="@+id/liquor"
+        android:typeface="monospace" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Liquor"
         android:id="@+id/liquor"
-        android:layout_above="@+id/beer"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/amount"
+        android:layout_marginTop="63dp"
+        android:layout_alignStart="@+id/getBLA"
+        android:layout_alignEnd="@+id/getBLA"
+        android:typeface="monospace"
+        android:background="#1E69D3"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Weight"
+        android:id="@+id/textView"
+        android:layout_marginStart="25dp"
+        android:textColor="#15201E"
+        android:typeface="monospace"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Quantity"
+        android:id="@+id/textView2"
+        android:textColor="#15201E"
+        android:typeface="monospace"
+        android:layout_alignBaseline="@+id/amount"
+        android:layout_alignBottom="@+id/amount"
+        android:layout_alignStart="@+id/textView"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Age"
+        android:id="@+id/textView3"
+        android:textColor="#15201E"
+        android:typeface="monospace"
+        android:layout_alignBaseline="@+id/age"
+        android:layout_alignBottom="@+id/age"
+        android:layout_alignEnd="@+id/liquor"
+        android:layout_marginEnd="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Time"
+        android:id="@+id/textView4"
+        android:textColor="#15201E"
+        android:typeface="monospace"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignStart="@+id/textView3"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="(oz)"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toEndOf="@+id/amount"
+        android:textColor="#777"
+        android:typeface="monospace"
+        android:textStyle="italic" />
 
 
     <!--

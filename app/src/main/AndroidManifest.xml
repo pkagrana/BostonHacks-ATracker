@@ -20,14 +20,10 @@
             android:name=".DataCollect"
             android:label="@string/title_activity_data_collect" >
         </activity>
-        <activity
-            android:name=".chooseDrink"
-            android:label="@string/title_activity_choose_drink" >
-        </activity>
-        <activity
-            android:name=".ChooseDrink"
-            android:label="@string/title_activity_choose_drink" >
-        </activity>
+        <!--<activity-->
+            <!--android:name=".ChooseDrink"-->
+            <!--android:label="@string/title_activity_choose_drink" >-->
+        <!--</activity>-->
     </application>
 
 </manifest>
